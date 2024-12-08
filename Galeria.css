@@ -1,0 +1,21 @@
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+    gap: 25px; /* Espacio entre las columnas */
+}
+.objeto {
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center; /* Centra el texto debajo de la imagen */
+    transition: transform 0.7s ease; /* Añade una transición suave para el efecto hover */
+    background-color: rgb(255, 255, 255);
+    
+}
+.objeto:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del contenedor al hacer hover */
+}
+.objeto img {
+    width: 100%; /* Ajusta el ancho de las imágenes para que ocupen todo el espacio del contenedor */
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Aplica el borde redondeado solo a la parte superior de la imagen */
+}

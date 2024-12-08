@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'mi fuente 1';
+    src: url('girassol-regular.woff2');
+    font-family: 'mi fuente 2';
+    src: url('girassol-regular-webfont.woff');
+}
+* { 
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño del elemento */ 
+    margin: 0; /* Elimina márgenes que puedan causar desbordamiento */ 
+    padding: 0; /* Elimina rellenos que puedan causar desbordamiento */ }
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: 'mi fuente 2';
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #ffffff;}
+   
+a{font-size: medium;}
+    
+p {font-size:xx-large;}
+
+header {
+    display: flex; /* Usamos flexbox */
+    justify-content: space-between; /* Espaciamos los elementos */
+    align-items: center; /* Centramos verticalmente los elementos */
+    height: 160px; /* Altura del header */
+    width: 100%; /* Ancho total */
+    background-color: #fff; /* Color de fondo */
+    padding: 0 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluir padding dentro del ancho */
+    border-radius: 10px 10px 0px 0px;
+}
+
+.izq {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    max-height: 160px; /* Limitar la altura de las imágenes */
+    width: auto; /* Mantener la proporción */
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1; /* El título ocupará todo el espacio disponible */
+    color: #000000b9;
+    text-shadow: 2px 2px 4px rgb(46, 49, 219);
+
+    /*background-image: url(img/chicas1ro.png);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;*/
+    font-size: 48px;
+}
+
+
+.nav1 {
+    background: rgb(51, 72, 102);
+    height: 50px;
+    border-radius: 0px 0px 10px 10px;
+    margin-bottom: 20px;
+}
+
+.nav1 ul {
+    list-style-type: none; /* Elimina los puntos de las listas */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Hace que los elementos de la lista se alineen horizontalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.nav1 ul li {
+    float: left;
+    list-style: none;
+    margin: 0 ;
+}
+
+.nav1 ul li a {
+    text-decoration: none; /* Quita el subrayado */
+    color: rgb(139, 208, 255); /* Color inicial del enlace */
+    padding: 10px 65px; /* Añade espacio alrededor de cada enlace */
+    display: block; /* Hace que todo el área del enlace sea clickeable */
+}
+
+.nav1 ul li a:hover {
+    color: rgb(29, 22, 114); /* Cambia el color cuando el puntero pasa sobre el enlace */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra al texto */
+    background-color: rgb(156, 215, 253); /* Opcional: añade un fondo al pasar el cursor */
+}
+
+#container {
+    width: 900px;
+    margin: 0px auto;
+    border: 1px solid black;
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+
+footer { 
+    background: #ffffff; /* Color de fondo del footer */ 
+    color: rgb(255, 255, 255); /* Color del texto del footer */ 
+    text-align: center; /* Centrar el texto */ 
+    padding: 20px; /* Espaciado interno */ 
+    border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */ 
+    margin-top: 20px; /* Añade un margen superior para separar del div.galeria */
+    }

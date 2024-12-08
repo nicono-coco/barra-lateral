@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="snow.css">
+    <link rel="stylesheet" href="Galeria.css">
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="estilos.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Móvil Independiente</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Evita el desbordamiento horizontal */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 20px;
+            cursor: pointer;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            color: #333;
+            background-color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
+        }
+
+        .mobile-menu {
+            height: 100vh;
+            width: 0;
+            max-width: 30%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            color: #fff;
+            overflow-x: hidden;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        .mobile-menu a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            background-color: #575757;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 36px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .mobile-menu.open {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><img src="lobonavid.png" alt="Logotipo"></h1>
+        </header>
+    <!-- Menú de Web -->
+    <div class="navbar">
+    <nav class="nav1">
+        <ul>
+            <li>
+                <a href="#">INICIO</a>
+            </li>
+            <li>
+                <a href="#">ARTICULOS</a>
+            </li>
+            <li>
+                <a href="#">ORIGEN</a>
+            </li>
+            <li>
+                <a href="#">COMPRA</a>
+            </li>
+            <li>
+                <a href="#">COMUNIDAD</a>
+            </li>
+            <li>
+                <a href="#">CRÉDITOS</a>
+            </li>
+            <li>
+            <a href="#">COMENTARIOS</a>
+        </li>
+        </ul>
+    </nav>
+    </div>
+
+    <!-- Botón del Menú Móvil -->
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776; Menú</button>
+
+    <!-- Menú Móvil Independiente -->
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="close-btn" onclick="toggleMobileMenu()"></span>
+        <a href="#"><i class="fas fa-home"></i> Inicio</a>
+        <a href="#"><i class="fas fa-file-alt"></i> Artículos</a>
+        <a href="#"><i class="fas fa-info"></i> Origen</a>
+        <a href="#"><i class="fas fa-shopping-cart"></i> Compra</a>
+        <a href="#"><i class="fas fa-users"></i> Comunidad</a>
+        <a href="#"><i class="fas fa-credit-card"></i> Créditos</a>
+    </div>
+    <div id="snow"></div> <script src="snow.js"></script>
+    <div class="galeria">
+        <div class="objeto"><a href="libros.html" style="color: black;"><img  src="libros.jpg" alt="libros"></a>
+            <font size="5" align="center"> TERTURIA LITERARIA</font></div>
+            <div class="objeto"><a href="Libros.html" style="color: black;"><img  src="navidad.jpg" alt="xmas"></a>
+            <font size="5" align="center"> EVENTO NAVIDAD</font></div>
+            <div class="objeto"><a href="poemas.html" style="color: black;"><img  src="poema.jpg" alt="poema" sizes="5"></a>
+            <font size="5" align="center"> POEMAS SECU </font></div>
+            <div class="objeto"><a href="libros.html" style="color: black;"><img  src="tips.png" alt="libros"></a>
+            <font size="5" align="center"> TIPS ESTUDIO </font></div>
+            <div class="objeto"><a href="libros.html" style="color: black;"><img  src="inte.jpg" alt="xmas"></a>
+            <font size="5" align="center">  ACERTIJOS </font></div>
+            <div class="objeto"><a href="reportaje.html" style="color: black;"><img  src="repor.jpg" alt="reportaje" sizes="5"></a>
+            <font size="5" align="center">REPORTAJE SEMANAL</font></div>
+    </div>
+</div>
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById("mobileMenu");
+            mobileMenu.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>
